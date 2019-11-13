@@ -9,11 +9,11 @@ import java.util.Set;
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String firstName;
-    String lastName;
+    private Long id;
+    private String firstName;
+    private String lastName;
     @ManyToMany(mappedBy = "authors")
-    Set<Book> books = new HashSet<>();
+    private Set<Book> books = new HashSet<>();
 
     public Author() {
     }
